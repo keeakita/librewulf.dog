@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    haml (4.0.7)
+      tilt
+    kramdown (1.10.0)
+    tilt (2.0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  haml
+  kramdown
+
+BUNDLED WITH
+   1.11.2

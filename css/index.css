@@ -1,0 +1,113 @@
+/* Fonts */
+@font-face{
+    font-family: 'Fira Sans UltraLight';
+    src: url('/font/FiraSans-UltraLight.eot');
+    src: local('Fira Sans UltraLight'),
+         url('/font/FiraSans-UltraLight.eot') format('embedded-opentype'),
+         url('/font/FiraSans-UltraLight.woff') format('woff'),
+         url('/font/FiraSans-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* General colors */
+.blue {
+    background: #00d2fd;
+    color: black;
+}
+
+a:visited {
+    color: #f48526;
+}
+
+a:link {
+    color: #00d2fd;
+}
+
+/* Main body layout, flexbox stuff */
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #555;
+}
+
+div.flex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Heading */
+div.header {
+    flex: 0 1 auto;
+    padding-bottom: 5rem;
+
+    background: #f48526;
+
+    text-align: center;
+    font-family: "Fira Sans UltraLight";
+}
+
+div.header .title {
+    font-size: 5rem;
+}
+
+div.header .subtitle {
+    font-size: 2rem;
+}
+
+/* Avatar image */
+img.avatar {
+    display: block;
+    border-radius: 50%;
+    width: 20rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Main content */
+div.content {
+    flex: 1 1 auto;
+}
+
+.text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Ref sheet image sizing */
+@media (max-width: 768px) {
+    .refsheet {
+        width: 95%;
+    }
+}
+
+@media (min-width: 768px) {
+    .refsheet {
+        width:750px;
+    }
+}
+
+.refsheet img {
+    width: 100%;
+}
+
+.refsheet {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: right;
+}
+
+/* Footer */
+.footer {
+    flex: 0 1 auto;
+    height: 3rem;
+
+    background: #555;
+    color: white;
+}
