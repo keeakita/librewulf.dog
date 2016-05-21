@@ -16,13 +16,26 @@
     color: black;
 }
 
+.orange {
+    background: #f48526;
+}
+
 a:visited {
-    color: #f48526;
+    color: white;
 }
 
 a:link {
+    color: white;
+}
+
+.footer a:link {
     color: #00d2fd;
 }
+
+.footer a:visited {
+    color: #f48526;
+}
+
 
 /* Main body layout, flexbox stuff */
 html, body {
@@ -41,8 +54,6 @@ div.flex {
 div.header {
     flex: 0 1 auto;
     padding-bottom: 5rem;
-
-    background: #f48526;
 
     text-align: center;
     font-family: "Fira Sans UltraLight";
@@ -79,22 +90,22 @@ div.content {
 
 /* Ref sheet image sizing */
 @media (max-width: 768px) {
-    .refsheet {
+    .gallery {
         width: 95%;
     }
 }
 
 @media (min-width: 768px) {
-    .refsheet {
+    .gallery {
         width:750px;
     }
 }
 
-.refsheet img {
+.gallery img {
     width: 100%;
 }
 
-.refsheet {
+.gallery {
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: auto;
