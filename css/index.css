@@ -1,13 +1,9 @@
 /* Fonts */
-@font-face{
-    font-family: 'Fira Sans UltraLight';
-    src: url('/font/FiraSans-UltraLight.eot');
-    src: local('Fira Sans UltraLight'),
-         url('/font/FiraSans-UltraLight.eot') format('embedded-opentype'),
-         url('/font/FiraSans-UltraLight.woff') format('woff'),
-         url('/font/FiraSans-Light.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(/font/Ubuntu-Light.ttf) format('truetype');
 }
 
 @font-face {
@@ -78,7 +74,8 @@ div.header {
     padding-bottom: 5rem;
 
     text-align: center;
-    font-family: "Fira Sans UltraLight";
+    font-family: "Ubuntu";
+    font-weight: 300;
 }
 
 div.header .title {
