@@ -10,6 +10,27 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu'), url(/font/Ubuntu.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(/font/Ubuntu-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Ubuntu Italic'), local('Ubuntu-Italic'), url(/font/Ubuntu-Italic.ttf) format('truetype');
+}
+
 /* General colors */
 .blue {
     background: #00d2fd;
@@ -42,6 +63,7 @@ html, body {
     height: 100%;
     margin: 0;
     background: #555;
+    font-family: "Ubuntu";
 }
 
 div.flex {
