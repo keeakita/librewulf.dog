@@ -10,7 +10,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
-  src: local('Ubuntu'), url(/font/Ubuntu.ttf) format('truetype');
+  src: local('Ubuntu-Regular'), url(/font/Ubuntu-regular.ttf) format('truetype');
 }
 
 @font-face {
