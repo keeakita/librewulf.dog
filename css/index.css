@@ -63,13 +63,16 @@ html, body {
 }
 
 div.flex {
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
-    height: 100%;
+    /*height: 100%;*/
 }
 
 /* Heading */
 div.header {
+    -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
     padding-bottom: 5rem;
 
@@ -99,6 +102,7 @@ img.avatar {
 
 /* Main content */
 div.content {
+    -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
 }
 
@@ -135,6 +139,7 @@ div.content {
 
 /* Footer */
 .footer {
+    -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
     height: 3rem;
 
