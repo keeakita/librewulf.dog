@@ -1,6 +1,11 @@
 @charset "utf-8";
 @import "normalize";
 
+// Variables
+$libre-orange: #f48526;
+$libre-blue:   #00d2fd;
+$libre-gray:   #555;
+
 // TODO: separate site styles form index page styles
 /* Fonts */
 @font-face {
@@ -32,15 +37,6 @@
 }
 
 /* General colors */
-.blue {
-    background: #00d2fd;
-    color: black;
-}
-
-.orange {
-    background: #f48526;
-}
-
 a:visited {
     color: white;
 }
@@ -50,11 +46,11 @@ a:link {
 }
 
 .footer a:link {
-    color: #00d2fd;
+    color: $libre-blue;
 }
 
 .footer a:visited {
-    color: #f48526;
+    color: $libre-orange;
 }
 
 
@@ -62,7 +58,7 @@ a:link {
 html, body {
     height: 100%;
     margin: 0;
-    background: #555;
+    background: $libre-gray;
     font-family: "Ubuntu";
 }
 
@@ -72,6 +68,16 @@ div.flex {
     -webkit-flex-direction: column;
     flex-direction: column;
     /*height: 100%;*/
+}
+
+/* Alternating Colors */
+.flex > div:nth-child(even) {
+    background: $libre-blue;
+    color: black;
+}
+
+.flex > div:nth-child(odd) {
+    background: $libre-orange;
 }
 
 /* Heading */
@@ -142,11 +148,11 @@ div.content {
 }
 
 /* Footer */
-.footer {
+.flex div.footer {
     -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
     height: 3rem;
 
-    background: #555;
+    background: $libre-gray;
     color: white;
 }
