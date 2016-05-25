@@ -1,23 +1,27 @@
+@charset "utf-8";
+@import "normalize";
+
+// TODO: separate site styles form index page styles
 /* Fonts */
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 300;
-  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(/font/Ubuntu-Light.ttf) format('truetype');
+  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(/fonts/Ubuntu-Light.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
-  src: local('Ubuntu-Regular'), url(/font/Ubuntu-regular.ttf) format('truetype');
+  src: local('Ubuntu'), local('Ubuntu-Regular'), url(/fonts/Ubuntu-Regular.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 700;
-  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(/font/Ubuntu-Bold.ttf) format('truetype');
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url(/fonts/Ubuntu-Bold.ttf) format('truetype');
 }
 
 @font-face {

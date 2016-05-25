@@ -1,0 +1,10 @@
+!!! 5
+%html
+  %head
+    %meta(charset="utf8")
+    %title= 'LibreWulf' + (current_page.data.title ? " | #{current_page.data.title}" : '')
+
+    = stylesheet_link_tag :site
+
+  %body{class: page_classes}
+    = yield
