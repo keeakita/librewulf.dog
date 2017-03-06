@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "normalize";
+@import "mixins";
 
 // Variables
 $libre-orange: #f48526;
@@ -130,7 +131,7 @@ div.content {
 
 @media (min-width: 768px) {
     .gallery {
-        width:750px;
+	@include calc("width", "768px - 4rem")
     }
 }
 
