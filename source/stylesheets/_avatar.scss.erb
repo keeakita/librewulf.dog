@@ -1,0 +1,40 @@
+<% entries = Dir.glob('source/images/avatars/*') %>
+
+/* Avatar image */
+div.avatar {
+    display: block;
+
+    border-radius: 50%;
+
+    width: 20rem;
+    height: 20rem;
+
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("<%= '/' + entries[0].sub('source/', '') %>");
+
+    animation-duration: <%= entries.size * 5 %>s;
+    animation-name: avatar-rotate;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear;
+}
+
+@keyframes avatar-rotate {
+  <% # Loop over the entires, calculating keyframe percentage %>
+  <% entries.each_index do |index| %>
+    <% step = 100.0 / entries.size / 2 %>
+    <% start = index * 2 * step %>
+    <% stop = ((index * 2) + 1) * step %>
+    <%= start.to_i.to_s %>%, <%= stop.to_i.to_s %>% {
+      <% filename = entries[index].sub('source/', '') %>
+      background-image: url("<%= '/' + filename %>");
+    }
+  <% end %>
+}
+
+

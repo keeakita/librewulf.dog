@@ -1,6 +1,8 @@
 @charset "utf-8";
-@import "normalize";
-@import "mixins";
+@import "source/stylesheets/normalize";
+@import "source/stylesheets/mixins";
+
+<%= partial(:avatar) %>
 
 // Variables
 $libre-orange: #f48526;
@@ -98,17 +100,6 @@ div.header .title {
 
 div.header .subtitle {
     font-size: 2rem;
-}
-
-/* Avatar image */
-img.avatar {
-    display: block;
-    border-radius: 50%;
-    width: 20rem;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Main content */
