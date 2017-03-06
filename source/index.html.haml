@@ -9,19 +9,19 @@ title: A Real Wulf, IRL
   .content
     .text
       .gallery
-        = image_tag 'librewulf_referencesheet.jpg', alt: 'Reference Sheet'
+        = partial(:gallery, locals: {image: 'librewulf_refsheet.png', alt: 'Reference Sheet'})
         :markdown
           Art by [CupcakeCreature](http://cupcakecreature.weebly.com/)
   .content
     .text
       .gallery
-        = image_tag 'hypno_icon.jpg', alt: 'Hypno Icon'
+        = partial(:gallery, locals: {image: 'hypno_icon.jpg', alt: 'Hypno Icon'})
         :markdown
           Art by [Echo](https://beta.furrynetwork.com/ech00/)
   .content
     .text
       .gallery
-        = image_tag 'what.png', alt: 'Masterpiece'
+        = partial(:gallery, locals: {image: 'what.png', alt: 'Masterpiece'})
         :markdown
           Art by [Cercat](http://cercat.tumblr.com/)
   .footer

@@ -1,30 +1,32 @@
 require 'find'
-require 'haml'
+require_relative './lib/thumbnailer.rb'
 
-task default: %w[haml]
+task default: %w[build]
 
-# Generate html files from haml
-task :haml do
-  forall_haml do |path|
-    outfile = File.new(path[0..-6], 'w')
-    engine = Haml::Engine.new(File.read(path))
-    outfile.write(engine.render)
-    outfile.close
-  end
+def clean_thumbnails
+  sh 'rm -r ./source/images/thumbnails'
+  sh 'mkdir -p ./source/images/thumbnails'
 end
 
-def forall_haml
-  Find.find('./') do |path|
-    # Exclude vendor
-    if path.start_with? './vendor'
-      Find.prune
-    end
+task :build do
+  puts 'Generating thumbnails'
 
+  clean_thumbnails
+
+  Find.find('./source/images/gallery/') do |path|
     # Only run on files
     if File::file? path
-      if /\.html.haml$/.match path
-        yield path
-      end
+      thumb = Thumbnail.new(path)
+      puts "Generating #{thumb.munge_filename}"
+      thumb.convert
     end
   end
+
+  puts 'Building Middleman project'
+  sh 'middleman build'
+end
+
+task :clean do
+  clean_thumbnails
+  sh 'rm -r ./build/'
 end

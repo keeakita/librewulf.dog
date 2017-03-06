@@ -1,0 +1,5 @@
+- alt = alt.nil? ? image : alt
+- require_relative './lib/thumbnailer.rb'
+- thumb = Thumbnail.new("source/images/gallery/#{image}")
+= link_to("/images/gallery/#{image}", alt: alt) do
+  = image_tag "thumbnails/#{thumb.munge_filename}"
