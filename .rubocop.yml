@@ -1,0 +1,11 @@
+Style/SpaceAroundEqualsInParameterDefault:
+    EnforcedStyle: no_space
+
+Style/IfUnlessModifier:
+    Enabled: false
+
+Metrics/AbcSize:
+    Enabled: false
+
+Metrics/MethodLength:
+    Enabled: false
