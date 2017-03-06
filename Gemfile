@@ -15,3 +15,7 @@ gem 'middleman-livereload'
 # HTML producing gems
 gem 'haml'
 gem 'kramdown'
+
+# Thumbnail generation
+gem 'rmagick'
+gem 'rake'
